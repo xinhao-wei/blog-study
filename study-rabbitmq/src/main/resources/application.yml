@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: ttl-test01
+
+  rabbitmq:
+    host: 60.204.174.250
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    listener:
+      simple:
+        acknowledge-mode: manual
+        prefetch: 1
+
+my:
+  exchangeName: exchange.ttl.a
+  queueName: queue.ttl.a

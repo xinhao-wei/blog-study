@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>study-rabbitmq</module>
     </modules>
 
     <properties>
