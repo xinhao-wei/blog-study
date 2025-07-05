@@ -6,26 +6,31 @@
 
     <parent>
         <groupId>com.wei</groupId>
-        <artifactId>blog-study</artifactId>
+        <artifactId>blog-component</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>blog-common</artifactId>
+    <groupId>com.wei</groupId>
+    <artifactId>blog-mp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
-    <packaging>pom</packaging>
 
     <dependencies>
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>2.0.57</version>
+            <groupId>com.wei</groupId>
+            <artifactId>blog-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-annotation</artifactId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.5.7</version>
         </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
     </dependencies>
+    
 </project>

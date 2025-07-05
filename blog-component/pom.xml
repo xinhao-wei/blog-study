@@ -18,5 +18,6 @@
 
     <modules>
         <module>blog-rabbitmq</module>
+        <module>blog-mp</module>
     </modules>
 </project>
