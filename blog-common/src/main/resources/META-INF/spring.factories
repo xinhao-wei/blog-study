@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.wei.web.converter.deserialzer.LocalDateConverter ,\
+  com.wei.web.converter.deserialzer.LocalDateTimeConverter
+
+  
