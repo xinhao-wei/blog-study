@@ -74,4 +74,10 @@ public class SysUserController {
     }
 
 
+    @PostMapping("plugin")
+    public R<Integer> selectInstallPlugin(@RequestBody List<SysUserEntity> addUserList) {
+        Integer count = sysUserService.selectInstallPlugin(addUserList);
+        return R.ok(count);
+    }
+
 }

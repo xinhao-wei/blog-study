@@ -13,4 +13,10 @@ public interface SysUserService extends IService<SysUserEntity> {
     public void insertUser(SysUserEntity user);
 
     public List<SysUserEntity> flowSelect();
+
+    /**
+     * 选装组件使用
+     * @return
+     */
+    Integer selectInstallPlugin(List<SysUserEntity> addUserList);
 }

@@ -6,6 +6,8 @@ mybatis-plus:
   check-config-location: true
   configuration:
     call-setters-on-nulls:
+    log-prefix: [SQL]
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 # DataSource Config
 spring:

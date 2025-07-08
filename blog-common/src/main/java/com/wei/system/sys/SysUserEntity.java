@@ -1,6 +1,7 @@
 package com.wei.system.sys;
 
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -25,7 +26,7 @@ public class SysUserEntity implements Serializable {
 	/**
 	 * 用户ID
 	 */
-	@TableId
+	@TableId("user_id")
 	private Long userId;
 
 	/**
@@ -69,5 +70,8 @@ public class SysUserEntity implements Serializable {
 	@JsonSerialize(using = LocalDateTimeSerializer.class)
 	@JsonFormat(pattern = "YYYY-MM-dd HH:mm:ss")
 	private LocalDateTime createTime;
+
+	@TableLogic
+	private char delFlag;
 
 }

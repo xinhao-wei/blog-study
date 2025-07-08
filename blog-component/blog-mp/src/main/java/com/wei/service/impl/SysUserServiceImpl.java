@@ -8,12 +8,16 @@ import com.wei.service.SysUserService;
 import com.wei.system.sys.SysUserEntity;
 import org.apache.ibatis.session.ResultContext;
 import org.apache.ibatis.session.ResultHandler;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUserEntity> implements SysUserService {
+
+    @Autowired
+    private SysUserMapper sysUserMapper;
 
     @Override
     public void insertUser(SysUserEntity user) {
@@ -36,5 +40,11 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUserEntity
         });
 
         return null;
+    }
+
+    @Override
+    public Integer selectInstallPlugin(List<SysUserEntity> addUserList) {
+        return baseMapper.insertBatchSomeColumn(addUserList);
+        //return sysUserMapper.insertBatchSomeColumn(addUserList);
     }
 }
