@@ -6,18 +6,13 @@
 
     <parent>
         <groupId>com.wei</groupId>
-        <artifactId>blog-study</artifactId>
+        <artifactId>blog-component</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <groupId>com.wei</groupId>
-    <artifactId>blog-component</artifactId>
+    <artifactId>blog-basic</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>blog-rabbitmq</module>
-        <module>blog-basic</module>
-    </modules>
+    
 </project>
