@@ -10,7 +10,7 @@ public class LockComparisonTest {
         ExecutorService executor = Executors.newFixedThreadPool(threadCount);
         long start = System.currentTimeMillis();
         
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1000; i++) {
             executor.execute(counter::increment);
         }
         
@@ -25,7 +25,7 @@ public class LockComparisonTest {
         ExecutorService executor = Executors.newFixedThreadPool(threadCount);
         long start = System.currentTimeMillis();
         
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1000; i++) {
             executor.execute(counter::increment);
         }
         
@@ -36,9 +36,9 @@ public class LockComparisonTest {
     }
     
     public static void main(String[] args) throws InterruptedException {
-        System.out.println("=== 低并发场景(5线程) ===");
-        testPessimistic(5);
-        testOptimistic(5);
+        //System.out.println("=== 低并发场景(5线程) ===");
+        //testPessimistic(5);
+        //testOptimistic(5);
         
         System.out.println("\n=== 高并发场景(50线程) ===");
         testPessimistic(50);
